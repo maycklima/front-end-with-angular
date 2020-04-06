@@ -13,6 +13,7 @@ import { DiretivaNgforComponent } from './diretiva-ngfor/diretiva-ngfor.componen
 import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
 import { EventBindComponent } from './event-bind/event-bind.component';
 import { HomeComponent } from './home/home.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HomeComponent } from './home/home.component';
     DiretivaNgifComponent,
     EventBindComponent,
     HomeComponent,
+    NgClassComponent,
   ],
   imports: [
     BrowserModule,
