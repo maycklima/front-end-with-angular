@@ -1,0 +1,14 @@
+    <h3>Event bind</h3>
+    <div>      
+      <input type="text" 
+        (keyup)="getDigitado($event)" 
+        (keyup.enter)="salvarValor(campoIntput.value)" #campoIntput/>
+        
+
+      <button (click)="salvarValor(campoIntput.value)" class="btn btn-primary"
+              (mouseover)="onMouseOverOut()"
+              (mouseout)="onMouseOverOut()"
+              [class.highlight]="isMouseOver">Submit</button>
+      <p>Valor digitado: {{digitado}}</p>
+      <p>Valor salvo: {{valorSalvo}}</p>
+    </div>

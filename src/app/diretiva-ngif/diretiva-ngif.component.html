@@ -1,0 +1,29 @@
+<article>
+    <h2>*ngIf</h2>
+
+    <div *ngIf="listaCursos.length > 0">
+      Lista de cursos aqui com 
+    </div>
+    <div *ngIf="listaCursos.length == 0">
+      Não possuimos cursos disponíveis
+    </div>
+
+    <div *ngIf="mostrarCursos">
+      Lista de cursos aqui (Verdadeiro)
+    </div>
+
+    <div *ngIf="!mostrarCursos">
+      Não possuimos cursos disponíveis (Falso)
+    </div>
+
+    <div [hidden]="!mostrarCursos">
+      Lista de cursos aqui (Verdadeiro)
+    </div>
+
+    <div [hidden]="mostrarCursos">
+      Não possuimos cursos disponíveis (Falso)
+    </div>
+
+    <button (click)="onMostrarCursos()" class="btn btn-primary">Inverter</button>
+
+  </article>

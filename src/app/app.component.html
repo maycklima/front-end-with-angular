@@ -1,1 +1,128 @@
-<app-data-bind></app-data-bind>
+<article>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Mayck</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'home'"
+            (click)="aba = 'home'" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'interpolacao'"
+            (click)="aba = 'interpolacao'" href="#">Interpolação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'caixaSelecao'"
+            (click)="aba = 'caixaSelecao'" href="#">Caixas de seleção</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'databind'"
+            (click)="aba = 'databind'" href="#">Data Bind</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'twoway'"
+            (click)="aba = 'twoway'" href="#">Tow-way-dada-bind</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'input'"
+            (click)="aba = 'input'" href="#">Input Property Component</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'ngif'"
+            (click)="aba = 'ngif'" href="#">*ngIf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [class.active]="aba == 'ngfor'"
+            (click)="aba = 'ngfor'" href="#">*ngFor</a>
+          </li>
+        </ul>
+      </div>
+    </nav><div class="row">
+      <div class="col-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          
+          <a class="nav-link" 
+            [class.active]="aba == 'home'"
+            (click)="aba = 'home'" href="#">Home</a>
+            
+            <a class="nav-link" 
+            [class.active]="aba == 'interpolacao'"
+            (click)="aba = 'interpolacao'" href="#">Interpolação</a>
+            
+            <a class="nav-link" 
+            [class.active]="aba == 'caixaSelecao'"
+            (click)="aba = 'caixaSelecao'" href="#">Caixas de seleção</a>
+            
+            <a class="nav-link" 
+            [class.active]="aba == 'databind'"
+            (click)="aba = 'databind'" href="#">Data Bind</a><li class="nav-item">
+            
+              <a class="nav-link" 
+            [class.active]="aba == 'twoway'"
+            (click)="aba = 'twoway'" href="#">Tow-way-dada-bind</a>
+
+            <a class="nav-link" 
+            [class.active]="aba == 'eventbind'"
+            (click)="aba = 'eventbind'" href="#">Event-bind</a>
+          
+            <a class="nav-link" 
+            [class.active]="aba == 'input'"
+            (click)="aba = 'input'" href="#">Input Property Component</a>
+         
+            <a class="nav-link" 
+            [class.active]="aba == 'ngif'"
+            (click)="aba = 'ngif'" href="#">*ngIf</a>
+
+            <a class="nav-link" 
+            [class.active]="aba == 'ngfor'"
+            (click)="aba = 'ngfor'" href="#">*ngFor</a>
+          </div>
+      </div>
+      <div class="col-9">
+        <div class="container" [ngSwitch]="aba" > 
+          <div>
+            <p *ngSwitchCase="'home' " ><app-home></app-home></p>
+          </div>
+          <div>
+            <p *ngSwitchCase="'interpolacao' " ><app-interpolacao></app-interpolacao></p>
+          </div>
+          <div>
+            <p *ngSwitchCase="'caixaSelecao'" ><app-caixa-de-selecao></app-caixa-de-selecao></p>
+          </div>
+          <div>
+            <p *ngSwitchCase="'databind'" ><app-data-bind></app-data-bind></p>
+          </div>          
+          <div>
+            <p *ngSwitchCase="'twoway'" ><app-two-away-data-bind></app-two-away-data-bind></p>
+          </div>
+          <div>
+            <p *ngSwitchCase="'eventbind'" ><app-event-bind></app-event-bind></p>
+          </div>
+          <div>
+            <p *ngSwitchCase="'input'" ><app-input-property></app-input-property></p>
+          </div>
+          <div>
+            <p *ngSwitchCase="'ngif'" ><app-diretiva-ngif></app-diretiva-ngif></p>
+          </div>
+          <div>
+            <p *ngSwitchCase="'ngfor'" ><app-diretiva-ngfor></app-diretiva-ngfor></p>
+          </div>
+          <div>
+            <p *ngSwitchDefault>Home</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </article>

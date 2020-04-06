@@ -1,0 +1,33 @@
+    <h3>Caixas de seleção com bootstrap e Propertie Bind.</h3>    
+    <div>     
+      Escolha uma das opções
+      <select #classe (change)="0">
+
+          <option value="alert-success">Sucesso</option>
+          <option value="alert-light"  >Luz</option>    
+          <option value="alert-info"   >Alerta</option>
+          <option value="alert-warning">Atencion</option>
+          <option value="alert-danger" >Prerigo</option>
+
+      </select>   
+
+    <div class="alert alert-success" role="alert" [style.display]="classe.value == 'alert-success'  ? 'block' : 'none'">
+    Sucesso
+    </div>
+
+    <div class="alert alert-light" role="alert" [style.display]="classe.value == 'alert-light' ? 'block' : 'none'">
+      Light      
+    </div>
+      
+    <div class="alert alert-info" role="alert" [style.display]="classe.value == 'alert-info' ? 'block' : 'none'">
+        Alert 
+    </div>
+
+    <div class="alert alert-warning" role="alert" [style.display]="classe.value == 'alert-warning' ? 'block' : 'none'">
+          Warning
+    </div>
+
+    <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+          Danger
+    </div>
+  </div>

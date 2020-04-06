@@ -1,0 +1,19 @@
+      <h3>Tow-way-dada-bind</h3>
+
+      Com target.value<br>
+      <input type="text" 
+      [value]="pessoa.nome"
+      (input)="pessoa.nome = $event.target.value"/>
+      <br>
+      
+      <p>Com ngModel sem target.value<br>
+      <input type="text" 
+      [ngModel]="pessoa.nome"
+      (ngModel)="pessoa.nome = $event" />
+      </p>
+
+      <p>Melhor jeito com [(ngModel)]="binding"<br>
+
+      <input type="text" [(ngModel)]="pessoa.nome">
+      <input type="text" [(ngModel)]="pessoa.sobrenome">      
+      <p>Olá, eu sou {{pessoa.nome}} {{pessoa.sobrenome}} e seja bem vindo ao meu site!</p>

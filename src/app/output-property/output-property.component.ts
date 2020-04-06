@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'contador',
@@ -7,18 +7,26 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 })
 export class OutputPropertyComponent implements OnInit {
 
-  @Input() valor = 0
+  @Input() valor = 0;
+
+  @ViewChild('campoInput') campoValorInput: ElementRef;
 
   incrementa(){
-    this.valor++;
+    if(this.valor < 10){
+      //console.log(this.campoValorInput)
+      console.log(this.valor);
+      this.valor++; 
+    }        
   }
   
   decrementa(){
-    this.valor--
+    if(this.valor > 0)
+    {
+      console.log(this.valor);
+      this.valor--;
+    }
   }
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
